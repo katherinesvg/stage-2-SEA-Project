@@ -192,6 +192,8 @@ const games = [
 ];
 
 let filteredGames = [...games];
+let favoriteGames = [];
+let showFavorites = false;
 
 // This function adds cards the page to display the data in the array
 function showCards(gameList) {
@@ -219,6 +221,7 @@ function editCardContent(card, game) {
   const moodBadge = card.querySelector(".mood-badge");
   const ratingBadge = card.querySelector(".rating-badge");
   const platformText = card.querySelector(".platform-text");
+  const favoriteBtn = card.querySelector(".favorite-btn");
 
   cardImage.src = game.image;
   cardImage.alt = `${game.title} cover`;
@@ -230,10 +233,28 @@ function editCardContent(card, game) {
   ratingBadge.textContent = `${game.rating}`;
   platformText.textContent = `Platforms: ${game.platform.join(", ")}`;
 
+  if (favoriteGames.includes(game.id)) {
+    favoriteBtn.textContent = "Favorited";
+  } else {
+    favoriteBtn.textContent = "Favorite";
+  }
+  favoriteBtn.addEventListener("click", () => {
+    toggleFavorite(game.id);
+  });
+
   // You can use console.log to help you debug!
   // View the output by right clicking on your website,
   // select "Inspect", then click on the "Console" tab
   console.log("new card:", game.title);
+}
+
+function toggleFavorite(gameId) {
+  if(favoriteGames.includes(gameId)) {
+    favoriteGames = favoriteGames.filter((id) => id !== gameId);
+  } else {
+    favoriteGames.push(gameId);
+  }
+  applyFilters();
 }
 
 function populateGenreFilter() {
@@ -260,8 +281,9 @@ function applyFilters() {
   filteredGames = games.filter((game) => {
     const matchesSearch = game.title.toLowerCase().includes(searchValue);
     const matchesGenre = selectedGenre === "all" || game.genre === selectedGenre;
+    const matchesFavorites = !showFavorites || favoriteGames.includes(game.id);
 
-    return matchesSearch && matchesGenre;
+    return matchesSearch && matchesGenre && matchesFavorites;
   });
 
   if (selectedSort === "rating-high") {
@@ -290,4 +312,18 @@ document.addEventListener("DOMContentLoaded", () => {
   document
   .getElementById("sort-select")
   .addEventListener("change", applyFilters);
+
+  document
+  .getElementById("favorites-toggle")
+  .addEventListener("click", () => {
+    showFavorites = !showFavorites;
+
+    const button = document.getElementById("favorites-toggle");
+    if (showFavorites) {
+      button.textContent = "Show All Games";
+    } else {
+      button.textContent = "Show Favorites";
+    }
+    applyFilters();
+  });
 });

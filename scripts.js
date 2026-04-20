@@ -31,7 +31,7 @@ const games = [
     mood: "Cozy",
     rating: 9.2,
     platform: ["PC", "Switch", "PlayStation", "Xbox", "Mobile"],
-    image: "https://placehold.co/600x800?text=Stardew+Valley",
+    image: "https://images.igdb.com/igdb/image/upload/t_cover_big/coa93h.webp",
     description:
       "A relaxing farming simulation where you build a life, grow crops, and make friends.",
   },
@@ -42,18 +42,18 @@ const games = [
     mood: "Adventurous",
     rating: 8.7,
     platform: ["PC", "PlayStation", "Mobile"],
-    image: "https://placehold.co/600x800?text=Genshin+Impact",
+    image: "https://images.igdb.com/igdb/image/upload/t_cover_big/coa9dy.webp",
     description:
       "An open-world action RPG with elemental combat, exploration, and an open fantasy world.",
   },
   {
     id: 3,
-    title: "Final Fantasy VII",
+    title: "Final Fantasy VII Remake Intergrade",
     genre: "RPG",
     mood: "Story Rich",
     rating: 9.5,
     platform: ["PlayStation", "PC"],
-    image: "https://placehold.co/600x800?text=Final+Fantasy+VII",
+    image: "https://images.igdb.com/igdb/image/upload/t_cover_big/cob9hh.webp",
     description:
       "A legendary RPG known for its unforgettable characters, emotional story, and cinematic battles.",
   },
@@ -64,7 +64,7 @@ const games = [
     mood: "Cozy",
     rating: 9.0,
     platform: ["Switch"],
-    image: "https://placehold.co/600x800?text=Animal+Crossing",
+    image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co3wls.webp",
     description:
       "A peaceful island-life game where you decorate, make friends with islanders, and create your dream island home.",
   },
@@ -75,7 +75,7 @@ const games = [
     mood: "Adventurous",
     rating: 9.8,
     platform: ["Switch"],
-    image: "https://placehold.co/600x800?text=Zelda+BOTW",
+    image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co3p2d.webp",
     description:
       "A beautiful open-world adventure full of discovery, puzzles, and freedom.",
   },
@@ -86,7 +86,7 @@ const games = [
     mood: "Creative",
     rating: 8.5,
     platform: ["PC", "PlayStation", "Xbox"],
-    image: "https://placehold.co/600x800?text=The+Sims+4",
+    image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co3h3l.webp",
     description:
       "A life simulation game where you create characters, build homes, and tell your own stories.",
   },
@@ -97,7 +97,7 @@ const games = [
     mood: "Competitive",
     rating: 8.6,
     platform: ["PC", "PlayStation", "Xbox", "Switch", "Mobile"],
-    image: "https://placehold.co/600x800?text=Fortnite",
+    image: "https://images.igdb.com/igdb/image/upload/t_cover_big/cobssb.webp",
     description:
       "A fast paced battle royale with building, live events, and constant new content.",
   },
@@ -108,7 +108,7 @@ const games = [
     mood: "Competitive",
     rating: 8.8,
     platform: ["PC"],
-    image: "https://placehold.co/600x800?text=Valorant",
+    image: "https://images.igdb.com/igdb/image/upload/t_cover_big/cobqao.webp",
     description:
       "A tactical team-based shooter that rewards precision, strategy, and communication.",
   },
@@ -119,7 +119,7 @@ const games = [
     mood: "Competitive",
     rating: 8.4,
     platform: ["PC"],
-    image: "https://placehold.co/600x800?text=League+of+Legends",
+    image: "https://images.igdb.com/igdb/image/upload/t_cover_big/cobpn7.webp",
     description:
       "A strategy-heavy multiplayer game with unique champions and intense team battles.",
   },
@@ -130,7 +130,7 @@ const games = [
     mood: "Creative",
     rating: 9.7,
     platform: ["PC", "PlayStation", "Xbox", "Switch", "Mobile"],
-    image: "https://placehold.co/600x800?text=Minecraft",
+    image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co8fu7.webp",
     description:
       "A sandbox world where you can build, explore, survive, and build anything you imagine.",
   },
@@ -141,18 +141,18 @@ const games = [
     mood: "Adventurous",
     rating: 8.3,
     platform: ["PC", "PlayStation"],
-    image: "https://placehold.co/600x800?text=Where+Winds+Meet",
+    image: "https://images.igdb.com/igdb/image/upload/t_cover_big/coauhs.webp",
     description:
       "A visually rich martial arts adventure with open-world exploration, combat, and historical fantasy.",
   },
   {
     id: 12,
-    title: "Overwatch 2",
+    title: "Overwatch",
     genre: "Shooter",
     mood: "Competitive",
     rating: 8.1,
     platform: ["PC", "PlayStation", "Xbox", "Switch"],
-    image: "https://placehold.co/600x800?text=Overwatch+2",
+    image: "https://images.igdb.com/igdb/image/upload/t_cover_big/cobium.webp",
     description:
       "A team hero shooter built around abilities, teamwork, and quick matches.",
   },
@@ -163,7 +163,7 @@ const games = [
     mood: "Casual",
     rating: 9.3,
     platform: ["Switch"],
-    image: "https://placehold.co/600x800?text=Mario+Kart+8",
+    image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co213p.webp",
     description:
       "A colorful racing game full of chaos, speed boosts, and iconic Nintendo tracks.",
   },
@@ -174,7 +174,7 @@ const games = [
     mood: "Social",
     rating: 8.0,
     platform: ["PC", "PlayStation", "Xbox", "Mobile"],
-    image: "https://placehold.co/600x800?text=Roblox",
+    image: "https://images.igdb.com/igdb/image/upload/t_cover_big/coabhb.webp",
     description:
       "A massive platform of user-created games where players can explore many different experiences.",
   },
@@ -185,7 +185,7 @@ const games = [
     mood: "Social",
     rating: 9.1,
     platform: ["PC"],
-    image: "https://placehold.co/600x800?text=World+of+Warcraft",
+    image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co2l7z.webp",
     description:
       "A long-running online fantasy world with quests, raids, and deep multiplayer experiences.",
   },
@@ -233,16 +233,61 @@ function editCardContent(card, game) {
   // You can use console.log to help you debug!
   // View the output by right clicking on your website,
   // select "Inspect", then click on the "Console" tab
-  console.log("new card:", newTitle, "- html: ", card);
+  console.log("new card:", game.title);
 }
 
 function populateGenreFilter() {
+  const genreFilter = document.getElementById("genre-filter");
+  const genres = [...new Set(games.map((game) => game.genre))];
 
+  for (let i = 0; i < genres.length; i++) {
+    const option = document.createElement("option");
+    option.value = genres[i];
+    option.textContent = genres[i];
+    genreFilter.appendChild(option);
+  }
 }
 
 function applyFilters() {
-  
+  const searchValue = document
+  .getElementById("search-input")
+  .value.toLowerCase()
+  .trim();
+
+  const selectedGenre = document.getElementById("genre-filter").value;
+  const selectedSort = document.getElementById("sort-select").value;
+
+  filteredGames = games.filter((game) => {
+    const matchesSearch = game.title.toLowerCase().includes(searchValue);
+    const matchesGenre = selectedGenre === "all" || game.genre === selectedGenre;
+
+    return matchesSearch && matchesGenre;
+  });
+
+  if (selectedSort === "rating-high") {
+    filteredGames.sort((a, b) => b.rating - a.rating);
+  } else if (selectedSort === "rating-low") {
+    filteredGames.sort((a, b) => a.rating - b.rating);
+  } else if (selectedSort === "title-az") {
+    filteredGames.sort((a, b) => a.title.localeCompare(b.title));
+  }
+  showCards(filteredGames);
 }
 
 // This calls the addCards() function when the page is first loaded
-document.addEventListener("DOMContentLoaded", showCards);
+document.addEventListener("DOMContentLoaded", () => {
+  populateGenreFilter();
+  showCards(games);
+
+  document
+  .getElementById("search-input")
+  .addEventListener("input", applyFilters);
+
+  document
+  .getElementById("genre-filter")
+  .addEventListener("change", applyFilters);
+
+  document
+  .getElementById("sort-select")
+  .addEventListener("change", applyFilters);
+});

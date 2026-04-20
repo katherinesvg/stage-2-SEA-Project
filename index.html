@@ -1,31 +1,56 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <title>LA TV Shows | Home</title>
-    <meta name="description" content="A Catalog of Shows Set in Los Angeles" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Level Up | Game Recommendation Catalog</title>
+    <meta
+      name="description"
+      content="A game recommendation catalog for every mood."
+    />
     <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="scripts.js"></script>
+    <script defer src="scripts.js"></script>
   </head>
 
   <body>
     <header class="main-header">
-      <h1 class="title">LA TV Shows</h1>
+      <h1 class="title">Level Up</h1>
+      <p class="subtitle">Find your next favorite game</p>
     </header>
-    <div id="card-container"></div>
-    <div class="card" style="display: none">
+
+    <section class="controls">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Search for a game..."
+      />
+
+      <select id="genre-filter">
+        <option value="all">All Genres</option>
+      </select>
+
+      <select id="sort-select">
+        <option value="default">Sort By</option>
+        <option value="rating-high">Highest Rated</option>
+        <option value="rating-low">Lowest Rated</option>
+        <option value="title-az">Title A-Z</option>
+      </select>
+    </section>
+
+    <section id="card-container"></section>
+
+    <div class="card" id="card-template" style="display: none">
       <div class="card-content">
-        <h2>TV Show Title</h2>
-        <img src="" alt="TV Show Poster" />
-        <ul>
-          <li>Bullet Point 1</li>
-          <li>Bullet Point 2</li>
-          <li>Bullet Point 3</li>
-        </ul>
+        <img class="card-image" src="" alt="" />
+        <h2 class="game-title">Game Title</h2>
+        <p class="game-description">Game description goes here.</p>
+        <div class="game-meta">
+          <span class="badge genre-badge">Genre</span>
+          <span class="badge mood-badge">Mood</span>
+          <span class="badge rating-badge">Rating</span>
+        </div>
+        <p class="platform-text"></p>
       </div>
-    </div>
-    <div class="footer">
-      <button onclick="quoteAlert()">Get A Quote!</button>
-      <button onclick="removeLastCard()">Remove A Card!</button>
     </div>
   </body>
 </html>

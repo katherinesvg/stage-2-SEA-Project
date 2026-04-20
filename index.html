@@ -35,8 +35,24 @@
         <option value="rating-low">Lowest Rated</option>
         <option value="title-az">Title A-Z</option>
       </select>
+      <button id="mood-popup-btn">How are you feeling?</button>
       <button id="favorites-toggle">Favorite Games</button>
     </section>
+
+    <div id="mood-modal" class="modal hidden">
+      <div class="modal-content">
+        <h2>How are you feeling?</h2>
+    
+        <select id="mood-filter">
+          <option value="all">Select your mood</option>
+        </select>
+    
+        <div class="modal-buttons">
+          <button id="mood-submit-btn">Submit</button>
+          <button id="mood-close-btn">Close</button>
+        </div>
+      </div>
+    </div>
 
     <section id="card-container"></section>
 

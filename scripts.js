@@ -269,6 +269,18 @@ function populateGenreFilter() {
   }
 }
 
+function populateMoodFilter() {
+  const moodFilter = document.getElementById("mood-filter");
+  const moods = [...new Set(games.map((game) => game.mood))];
+
+  for (let i = 0; i < moods.length; i++) {
+    const option = document.createElement("option");
+    option.value = moods[i];
+    option.textContent = moods[i];
+    moodFilter.appendChild(option);
+  }
+}
+
 function applyFilters() {
   const searchValue = document
   .getElementById("search-input")
@@ -277,13 +289,15 @@ function applyFilters() {
 
   const selectedGenre = document.getElementById("genre-filter").value;
   const selectedSort = document.getElementById("sort-select").value;
+  const selectedMood = document.getElementById("mood-filter").value;
 
   filteredGames = games.filter((game) => {
     const matchesSearch = game.title.toLowerCase().includes(searchValue);
     const matchesGenre = selectedGenre === "all" || game.genre === selectedGenre;
+    const matchesMood = selectedMood === "all" || game.mood === selectedMood;
     const matchesFavorites = !showFavorites || favoriteGames.includes(game.id);
 
-    return matchesSearch && matchesGenre && matchesFavorites;
+    return matchesSearch && matchesGenre && matchesMood && matchesFavorites;
   });
 
   if (selectedSort === "rating-high") {
@@ -299,6 +313,7 @@ function applyFilters() {
 // This calls the addCards() function when the page is first loaded
 document.addEventListener("DOMContentLoaded", () => {
   populateGenreFilter();
+  populateMoodFilter();
   showCards(games);
 
   document
@@ -325,5 +340,21 @@ document.addEventListener("DOMContentLoaded", () => {
       button.textContent = "Show Favorites";
     }
     applyFilters();
+  });
+
+  const moodModal = document.getElementById("mood-modal");
+  const moodPopupBtn = document.getElementById("mood-popup-btn");
+  const moodSubmitBtn = document.getElementById("mood-submit-btn");
+  const moodCloseBtn = document.getElementById("mood-close-btn");
+
+  moodPopupBtn.addEventListener("click", () => {
+    moodModal.classList.remove("hidden");
+  });
+  moodCloseBtn.addEventListener("click", () => {
+    moodModal.classList.add("hidden");
+  });
+  moodSubmitBtn.addEventListener("click", () => {
+    applyFilters();
+    moodModal.classList.add("hidden");
   });
 });

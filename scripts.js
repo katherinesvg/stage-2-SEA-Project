@@ -234,9 +234,9 @@ function editCardContent(card, game) {
   platformText.textContent = `Platforms: ${game.platform.join(", ")}`;
 
   if (favoriteGames.includes(game.id)) {
-    favoriteBtn.textContent = "Favorited";
+    favoriteBtn.textContent = "Favorited♥";
   } else {
-    favoriteBtn.textContent = "Favorite";
+    favoriteBtn.textContent = "Favorite♡";
   }
   favoriteBtn.addEventListener("click", () => {
     toggleFavorite(game.id);
